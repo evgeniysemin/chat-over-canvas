@@ -33,6 +33,7 @@ export const handleTextWithForceExpand: SaluteHandler<SaluteRequest> = ({ res })
 };
 
 export const handleCard: SaluteHandler<SaluteRequest> = ({ res }) => {
+    res.setPronounceText('Карточка ListCard');
     res.appendCard({
         type: 'list_card',
         cells: [
