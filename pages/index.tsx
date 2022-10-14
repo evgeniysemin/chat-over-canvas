@@ -3,7 +3,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
 const title = 'Чат поверх канваса';
-const description = 'Тестирует открытие чата поверх канваса. Выберите нужный саджест';
+const description = 'Протестируйте реакцию поверхности на различные типы новых сообщений. Для этого выберите нужный саджест.';
 
 const Home: NextPage = () => (
 	<div className={styles.container}>

@@ -23,12 +23,17 @@ const appendSuggestions = (res: SaluteResponse) => {
 };
 
 export const runAppHandler: SaluteHandler<SaluteRequest> = ({ res }) => {
+    const greeting =
+        'Здравствуйте! Здесь вы можете протестировать реакцию поверхности на новые сообщения в канвас. Просто выберите нужный саджест';
+
+    res.setPronounceText(greeting);
+    res.appendBubble(greeting);
     appendSuggestions(res);
 };
 
 export const noMatchHandler: SaluteHandler = ({ res }) => {
-    res.setPronounceText('Ха-ха! Ох, как смешно!');
-    res.appendBubble('Ха-ха! Ох, как смешно!');
+    res.setPronounceText('Ха-ха! Я вас не понял, но ох как смешно!');
+    res.appendBubble('Ха-ха! Я вас не понял, но ох как смешно!');
     appendSuggestions(res);
 };
 
@@ -87,7 +92,7 @@ export const handleCard: SaluteHandler<SaluteRequest> = ({ res }) => {
                             typeface: 'headline3',
                             text_color: 'default',
                             margins: {
-                                left: '4x',
+                                left: '6x',
                                 top: '4x',
                                 right: '4x',
                                 bottom: '4x',
