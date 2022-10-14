@@ -79,7 +79,22 @@ export const handleCard: SaluteHandler<SaluteRequest> = ({ res }) => {
         cells: [
             {
                 type: 'left_right_cell_view',
-                left: { type: 'simple_left_view' },
+                left: {
+                    type: 'simple_left_view',
+                    texts: {
+                        title: {
+                            text: 'Lorem ipsum dolor',
+                            typeface: 'headline3',
+                            text_color: 'default',
+                            margins: {
+                                left: '4x',
+                                top: '4x',
+                                right: '4x',
+                                bottom: '4x',
+                            },
+                        },
+                    },
+                },
             },
         ],
     });
