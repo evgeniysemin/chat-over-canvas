@@ -11,21 +11,55 @@ import {
 } from '@salutejs/scenario';
 import { SaluteMemoryStorage } from '@salutejs/storage-adapter-memory';
 
-import { TEXT_WITHOUT_FORCE_EXPAND, TEXT_WITH_FORCE_EXPAND, CARD } from './intents';
-import { handleTextWithoutForceExpand, handleTextWithForceExpand, handleCard, noMatchHandler, runAppHandler } from './handlers';
+import {
+    handleTextWithoutForceExpand,
+    handleTextWithForceExpand,
+    handleOneLineText,
+    handleTwoLinesText,
+    handleThreeLinesText,
+    handleLongText,
+    handleCard,
+    noMatchHandler,
+    runAppHandler,
+} from './handlers';
+import {
+    TEXT_WITHOUT_FORCE_EXPAND,
+    TEXT_WITH_FORCE_EXPAND,
+    ONE_LINE_TEXT,
+    TWO_LINES_TEXT,
+    THREE_LINES_TEXT,
+    LONG_TEXT,
+    CARD,
+} from './intents';
 
 const { text } = createMatchers<SaluteRequest>();
 
 const userScenario = createUserScenario({
-    GetInitialTags: {
+    TextWithoutForceExpand: {
         match: text(TEXT_WITHOUT_FORCE_EXPAND),
         handle: handleTextWithoutForceExpand,
     },
-    SelectTag: {
+    TextWithForceExpand: {
         match: text(TEXT_WITH_FORCE_EXPAND),
         handle: handleTextWithForceExpand,
     },
-    SelectTagAction: {
+    OneLineText: {
+        match: text(ONE_LINE_TEXT),
+        handle: handleOneLineText,
+    },
+    TwoLinesText: {
+        match: text(TWO_LINES_TEXT),
+        handle: handleTwoLinesText,
+    },
+    ThreeLinesText: {
+        match: text(THREE_LINES_TEXT),
+        handle: handleThreeLinesText,
+    },
+    LongText: {
+        match: text(LONG_TEXT),
+        handle: handleLongText,
+    },
+    Card: {
         match: text(CARD),
         handle: handleCard,
     },
