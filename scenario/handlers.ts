@@ -26,5 +26,13 @@ export const handleTextWithForceExpand: SaluteHandler<SaluteRequest> = ({ res })
 };
 
 export const handleCard: SaluteHandler<SaluteRequest> = ({ res }) => {
-    
+    res.appendCard({
+        type: 'list_card',
+        cells: [
+            {
+                type: 'left_right_cell_view',
+                left: { type: 'simple_left_view' },
+            },
+        ],
+    })
 };
