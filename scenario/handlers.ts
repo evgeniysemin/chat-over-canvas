@@ -57,14 +57,14 @@ export const handleOneLineText: SaluteHandler<SaluteRequest> = ({ res }) => {
 
 export const handleTwoLinesText: SaluteHandler<SaluteRequest> = ({ res }) => {
     res.setPronounceText(TWO_LINES_TEXT);
-    res.appendBubble('Lorem ipsum dolor sit amet consectetur adipisicing elit.');
+    res.appendBubble('Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit neque veniam architecto iste.');
     appendSuggestions(res);
 };
 
 export const handleThreeLinesText: SaluteHandler<SaluteRequest> = ({ res }) => {
     res.setPronounceText(THREE_LINES_TEXT);
     res.appendBubble(
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.',
+        'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit neque veniam architecto. Iste doloribus ratione dolorem porro, mollitia.'
     );
     appendSuggestions(res);
 };
@@ -72,7 +72,7 @@ export const handleThreeLinesText: SaluteHandler<SaluteRequest> = ({ res }) => {
 export const handleLongText: SaluteHandler<SaluteRequest> = ({ res }) => {
     res.setPronounceText(LONG_TEXT);
     res.appendBubble(
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+        'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit neque veniam architecto. Iste doloribus ratione dolorem porro, mollitia quibusdam aspernatur aperiam? Perferendis, quaerat ea nam illo id dolore? Odio, dolore similique temporibus quibusdam pariatur deserunt quasi eos nihil rem vel mollitia porro minima. Explicabo voluptates sint beatae voluptatum, rerum quos repudiandae sapiente iusto, laboriosam, hic quam! Fuga facere dolorum ratione dolores doloribus fugit praesentium explicabo odit magni iste assumenda saepe nesciunt tempore aperiam blanditiis deserunt.'
     );
     appendSuggestions(res);
 };
