@@ -17,15 +17,15 @@ const { regexp } = createMatchers<SaluteRequest>();
 
 const userScenario = createUserScenario({
     GetInitialTags: {
-        match: regexp(/Текст без force_expand/),
+        match: regexp(/Текст без force_expand/i),
         handle: handleTextWithoutForceExpand,
     },
     SelectTag: {
-        match: regexp(/Текст с force_expand/),
+        match: regexp(/Текст с force_expand/i),
         handle: handleTextWithForceExpand,
     },
     SelectTagAction: {
-        match: regexp(/Карточка/),
+        match: regexp(/Карточка/i),
         handle: handleCard,
     },
 });

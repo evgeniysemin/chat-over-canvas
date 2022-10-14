@@ -5,8 +5,8 @@ export const runAppHandler: SaluteHandler<SaluteRequest> = ({ res }) => {
 };
 
 export const noMatchHandler: SaluteHandler = ({ res }) => {
-    res.setPronounceText('Я не понимаю');
-    res.appendBubble('Я не понимаю');
+    res.setPronounceText('Ха-ха! Ох, как смешно!');
+    res.appendBubble('Ха-ха! Ох, как смешно!');
 };
 
 export const handleTextWithoutForceExpand: SaluteHandler<SaluteRequest> = ({ res }) => {
