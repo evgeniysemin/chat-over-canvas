@@ -11,21 +11,22 @@ import {
 } from '@salutejs/scenario';
 import { SaluteMemoryStorage } from '@salutejs/storage-adapter-memory';
 
+import { TEXT_WITHOUT_FORCE_EXPAND, TEXT_WITH_FORCE_EXPAND, CARD } from './intents';
 import { handleTextWithoutForceExpand, handleTextWithForceExpand, handleCard, noMatchHandler, runAppHandler } from './handlers';
 
-const { regexp } = createMatchers<SaluteRequest>();
+const { text } = createMatchers<SaluteRequest>();
 
 const userScenario = createUserScenario({
     GetInitialTags: {
-        match: regexp(/Текст без force_expand/i),
+        match: text(TEXT_WITHOUT_FORCE_EXPAND),
         handle: handleTextWithoutForceExpand,
     },
     SelectTag: {
-        match: regexp(/Текст с force_expand/i),
+        match: text(TEXT_WITH_FORCE_EXPAND),
         handle: handleTextWithForceExpand,
     },
     SelectTagAction: {
-        match: regexp(/Карточка/i),
+        match: text(CARD),
         handle: handleCard,
     },
 });

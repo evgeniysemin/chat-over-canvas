@@ -1,7 +1,13 @@
 import { SaluteHandler, SaluteRequest } from '@salutejs/scenario';
 
+import { TEXT_WITHOUT_FORCE_EXPAND, TEXT_WITH_FORCE_EXPAND, CARD } from './intents';
+
 export const runAppHandler: SaluteHandler<SaluteRequest> = ({ res }) => {
-    
+    res.appendSuggestions([
+        TEXT_WITHOUT_FORCE_EXPAND,
+        TEXT_WITH_FORCE_EXPAND,
+        CARD,
+    ]);
 };
 
 export const noMatchHandler: SaluteHandler = ({ res }) => {
