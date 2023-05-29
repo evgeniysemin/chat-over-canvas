@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@salutejs/client": "^1.7.0",
+    "@salutejs/client": "^1.18.0",
     "@salutejs/scenario": "^0.26.3",
     "@salutejs/storage-adapter-memory": "^0.26.3",
     "next": "12.3.1",
